@@ -138,7 +138,7 @@ But I'll leave that for another blog post.
 
 <img align="right" style="margin: 8px 8px" alt="Wolf relaxing" src="wolf_relaxing_210x156.png">
 
- With NATS+Resgate and the REsource Subscription (RES) protocol, you can get realtime updates to your web clients while gaining functionality such as **end-user authentication**, **resource caching**, and **data-loss recovery**.
+ With NATS+Resgate and the REsource Subscription (RES) protocol, you can get realtime updates to your web clients while gaining functionality such as **end-user authentication**, **resource caching**, and **data-loss recovery**. And it is **high performant** and **simple**!
 
  While the project is young, the first version of the protocol is settled, where no changes will be added that breaks backwards compatability. Resgate will continue to get battle tested as the number of projects where the gateway is deployed in increases. Meanwhile, steps are being taken to provide a proper website with guides and examples to ease introduction and development of services for NATS+Resgate.
  
