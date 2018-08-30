@@ -28,7 +28,9 @@ The fact that NATS, just like Resgate, is written in Go, made the choice even ea
 ## Fitting it all together
 A simple NATS+Resgate setup would look like this:
 
-<img style="display: block; max-width: 100%; height: auto; margin-left:auto; margin-right: auto" class="img-responsive center-block" alt="Architecture Diagram" src="simple-res-network-icon.svg">
+<p align="center">
+<img class="img-responsive center-block" alt="Architecture Diagram" src="simple-res-network-icon.svg">
+</p>
 
 The service(s) can be written in any language supported by NATS server. Instead of using HTTP, the service will listen to requests published over NATS. And if a resource is modified, the service will use NATS to publish the event that describes the modification.
 
