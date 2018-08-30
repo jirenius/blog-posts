@@ -2,7 +2,7 @@
 
 REST API's are nice. Simple. Stateless. Scaleable. But to keep clients data updated in realtime, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
 
-<img style="float:right" alt="Wolf Questioning" src="wolf_questioning_150x240.png">
+<img align="right" alt="Wolf Questioning" src="wolf_questioning_150x240.png">
 
 *Which resources do I need events for?*  
 *How do I manage sending each client only the events they need?*  
@@ -72,7 +72,7 @@ mymodel.message = "Hello NATS+Resgate";
 nats.publish('event.models.mymodel.change', JSON.stringify({ message: mymodel.message  }));
 ```
 
-<img style="float:right" alt="Wolf Questioning" src="wolf_now_kiss_135x240.png">
+<img align="right" alt="Wolf match maker" src="wolf_now_kiss_135x240.png">
 
 That's it!
 
@@ -134,7 +134,7 @@ But I'll leave that for another blog post.
 
 ## Now and beyond
 
-<img style="float:right; margin: 8px 8px" alt="Wolf Questioning" src="wolf_relaxing_210x156.png">
+<img align="right" style="margin: 8px 8px" alt="Wolf relaxing" src="wolf_relaxing_210x156.png">
 
  With NATS+Resgate and the REsource Subscription (RES) protocol, you can get realtime updates to your web clients while gaining functionality such as **end-user authentication**, **resource caching**, and **data-loss recovery**.
 
