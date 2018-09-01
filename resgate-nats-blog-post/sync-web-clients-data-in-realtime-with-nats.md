@@ -1,6 +1,6 @@
-# Sync web clients' data in realtime with NATS
+# Sync web clients' data in real time with NATS
 
-REST APIs are nice. Simple. Stateless. Scaleable. But to keep clients' data updated in realtime, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
+REST APIs are nice. Simple. Stateless. Scalable. But to keep clients' data updated in real time, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
 
 <img align="right" alt="Wolf Questioning" src="wolf_questioning_150x240.png">
 
@@ -103,7 +103,7 @@ client.get('models.mymodel').then(model => {
 });
 ```
 
-But when using ResClient, that communicates over WebSockets, your resources are updated in realtime!
+But when using ResClient, that communicates over WebSockets, your resources are updated in real time!
 ```js
 let changeHandler = function() {
     console.log("Updated: " + model.message); // Updated: Hello NATS+Resgate
@@ -120,13 +120,13 @@ No extra code is needed for updating the model on events that modifies the state
 
 ## Additional benefits
 
-Apart from the obvious benefit of getting data synced between clients in realtime, there are more to gain. This blog post is mainly a basic introduction to NATS+Resgate, but I will quickly describe a few other features that each could deserve their own blog post:
+Apart from the obvious benefit of getting data synced between clients in real time, there are more to gain. This blog post is mainly a basic introduction to NATS+Resgate, but I will quickly describe a few other features that each could deserve their own blog post:
 
 **Caching**  
-All resources are cachable by Resgate. This means that if multiple clients requests the same resource, it will only need to send a single *get* request, taking load off the service.
+All resources are cacheable by Resgate. This means that if multiple clients requests the same resource, it will only need to send a single *get* request, taking load off the service.
 
 **Resource queries**  
-Resgate supports resource queries for searches, filters, or pagination. Just like any other resource, query resources are also updated in realtime.
+Resgate supports resource queries for searches, filters, or pagination. Just like any other resource, query resources are also updated in real time.
 
 **Scaling**  
 Multiple Resgates may be connected to NATS to handle massive amounts of clients. In addition, the setup may be replicated to near limitless scaling.
@@ -138,18 +138,18 @@ The system recovers and resources are resynchronized seamlessly after lost conne
 Resources may be linked together with references. This allows fetching complex and nested data in a single client request.
 
 **Access control**  
-Access control is done on the level of resources and resource methods. Access can be revoked in realtime without having to wait for a token to expire. For authentication, any sort of schema may be implemented, such as username/password, header authentication, JWT, OAuth2, etc.
+Access control is done on the level of resources and resource methods. Access can be revoked in real time without having to wait for a token to expire. For authentication, any sort of schema may be implemented, such as username/password, header authentication, JWT, OAuth2, etc.
 
 ## Conclusion and evolution
 
 <img align="right" style="margin: 8px 8px" alt="Wolf relaxing" src="wolf_relaxing_210x156.png">
 
- With NATS+Resgate and the REsource Subscription (RES) protocol, you can get realtime updates to your web clients while gaining functionality such as **end-user authentication**, **resource caching**, and **data-loss recovery**. And it is **fast** and **simple**!
+ With NATS+Resgate and the REsource Subscription (RES) protocol, you can get real time updates to your web clients while gaining functionality such as **end-user authentication**, **resource caching**, and **data-loss recovery**. And it is **fast** and **simple**!
 
- While the project is young, the first version of the protocol is settled, where no changes will be added that breaks backwards compatability. Resgate will continue to get battle tested as the number of projects where the gateway is deployed in increases. Meanwhile, steps are being taken to provide a proper website with guides and examples to ease introduction and development of services for NATS+Resgate.
+ While the project is young, the first version of the protocol is settled, where no changes will be added that breaks backwards compatibility. Resgate will continue to get battle tested as the number of projects where the gateway is deployed in increases. Meanwhile, steps are being taken to provide a proper website with guides and examples to ease introduction and development of services for NATS+Resgate.
  
 If you are interested in knowing more, visit the project page on [Github](https://github.com/jirenius/resgate).  
-Or if you have any question or feedback, don't hesitate to contact me directly via e-mail:
+Or if you have any question or feedback, don't hesitate to contact me directly via email:
 
 [&#115;&#097;&#109;&#117;&#101;&#108;&#064;&#106;&#105;&#114;&#101;&#110;&#105;&#117;&#115;&#046;&#099;&#111;&#109;](mailto:&#115;&#097;&#109;&#117;&#101;&#108;&#064;&#106;&#105;&#114;&#101;&#110;&#105;&#117;&#115;&#046;&#099;&#111;&#109;)
 
