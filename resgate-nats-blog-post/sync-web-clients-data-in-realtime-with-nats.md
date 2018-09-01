@@ -163,8 +163,8 @@ Or find me in the [NATS Community](https://natsio.slack.com/messages/DBET737GV).
 
 
 ## Examples
-* [Hello World example](https://github.com/jirenius/resgate/tree/master/examples/hello-world)
-* [Book Collection example](https://github.com/jirenius/resgate/tree/master/examples/book-collection)
+* **[Hello World example](https://github.com/jirenius/resgate/tree/master/examples/hello-world)**
+* **[Book Collection example](https://github.com/jirenius/resgate/tree/master/examples/book-collection)**
 
 
 *NOTE: Resgate and all related tools are released under the MIT license.*
