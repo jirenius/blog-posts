@@ -1,4 +1,4 @@
-# Sync web clients' data in real time with NATS
+# Synchronize web client data in real time with NATS
 
 REST APIs are nice. Simple. Stateless. Scalable. But to keep clients' data updated in real time, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
 
@@ -36,7 +36,7 @@ Resgate becomes the single entry point for all clients. While there might be one
 
 The service(s), which can be written in any language supported by NATS server, will listen to requests similar to REST. But instead of using HTTP, the service will listen and reply to requests published over NATS.
 
-If a resource is modified, the service uses NATS to publish an event that describes the modification, allowing any Resgate to pass on the event to the subscribing clients so that they can have an update within a matter of milliseconds.
+If a resource is modified, the service uses NATS to publish an event that describes the modification, allowing any Resgate to pass on the event to the subscribing clients so they can have an update within a matter of milliseconds.
 
 Does it sound complicated? It really isn't! Let me show you.
 
@@ -120,7 +120,7 @@ No extra code is needed for updating the model on events that modifies the state
 
 ## Additional benefits
 
-Apart from the obvious benefit of getting data synced between clients in real time, there are more to gain. This blog post is mainly a basic introduction to NATS+Resgate, but I will quickly describe a few other features that each could deserve their own blog post:
+Apart from the obvious benefit of getting data syncronized between clients in real time, there is more to gain. This blog post is mainly a basic introduction to NATS+Resgate, but I will quickly describe a few other features that each could deserve their own blog post:
 
 **Caching**  
 All resources are cacheable by Resgate. This means that if multiple clients requests the same resource, it will only need to send a single *get* request, taking load off the service.
