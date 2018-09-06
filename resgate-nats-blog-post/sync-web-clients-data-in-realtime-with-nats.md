@@ -1,6 +1,6 @@
 # Synchronize web client data in real time with NATS
 
-REST APIs are nice. Simple. Stateless. Scalable. But to keep clients' data updated in real time, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
+REST APIs are nice. Simple. Stateless. Scalable. But to keep client data updated in real time, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
 
 <img align="right" alt="Wolf Questioning" src="wolf_questioning_150x240.png">
 
@@ -154,6 +154,14 @@ Or if you have any question or feedback, don't hesitate to contact me directly v
 [&#115;&#097;&#109;&#117;&#101;&#108;&#064;&#106;&#105;&#114;&#101;&#110;&#105;&#117;&#115;&#046;&#099;&#111;&#109;](mailto:&#115;&#097;&#109;&#117;&#101;&#108;&#064;&#106;&#105;&#114;&#101;&#110;&#105;&#117;&#115;&#046;&#099;&#111;&#109;)
 
 Or find me in the [NATS Community](https://natsio.slack.com/messages/DBET737GV).
+
+## About the author
+
+Samuel Jirénius is a long time developer with his roots in C64 Basic and Amiga's Motorola 68k assembler, but is now using a wide variety of technologies (with a passion for [Go](https://golang.org/)) to bring highly interactive web experiences to end users.
+
+He has been working as the system architect and lead developer of Altitude Xperience, a cloud based call center solution developed by [Altitude](https://www.altitude.com/). The call center market's requirement of scalability, high availablity, and real time client synchronization, seeded the ideas that would eventually, after leaving Altitude, lead to the development of Resgate.
+
+Samuel is currently working at [PRO NON X](https://www.prononx.se/)
 
 ## Links
 * **[Resgate](https://github.com/jirenius/resgate)** - project page for the realtime API gateway
