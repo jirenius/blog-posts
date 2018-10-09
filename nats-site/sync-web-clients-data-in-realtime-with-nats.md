@@ -1,8 +1,8 @@
-# Synchronize web client data in real time with NATS
+# Guest Post: Synchronize web apps in real time with NATS+Resgate
 
 REST APIs are nice. Simple. Stateless. Scalable. But to keep client data updated in real time, things get more complicated. Streaming events is easy, but you start having to deal with questions like:
 
-<img align="right" alt="Wolf Questioning" src="wolf_questioning_150x240.png">
+<img align="right" alt="Wolf Questioning" src="../imgs/wolf_questioning_150x240.png">
 
 *Which resources do I need events for?*  
 *How do I manage sending each client only the events they need?*  
@@ -29,7 +29,7 @@ The fact that NATS, just like Resgate, is written in Go, made the choice even ea
 A simple NATS+Resgate setup would look like this:
 
 <p align="center">
-<img class="img-responsive center-block" alt="Architecture Diagram" src="simple-res-network-icon.svg">
+<img class="img-responsive center-block" alt="Architecture Diagram" src="../imgs/simple-res-network-icon.svg">
 </p>
 
 Resgate becomes the single entry point for all clients. While there might be one macro-service, or a hundred micro-services, connected to NATS, the client that accesses the API will perceive it as a single unified API.
@@ -78,7 +78,7 @@ mymodel.message = "Hello NATS+Resgate";
 nats.publish('event.models.mymodel.change', JSON.stringify({ message: mymodel.message }));
 ```
 
-<img align="right" alt="Wolf match maker" src="wolf_now_kiss_135x240.png">
+<img align="right" alt="Wolf match maker" src="../imgs/wolf_now_kiss_135x240.png">
 
 That's it!
 
@@ -142,7 +142,7 @@ Access control is done on the level of resources and resource methods. Access ca
 
 ## Conclusion and evolution
 
-<img align="right" style="margin: 8px 8px" alt="Wolf relaxing" src="wolf_relaxing_210x156.png">
+<img align="right" style="margin: 8px 8px" alt="Wolf relaxing" src="../imgs/wolf_relaxing_210x156.png">
 
  With NATS+Resgate and the REsource Subscription (RES) protocol, you can get real time updates to your web clients while gaining functionality such as **end-user authentication**, **resource caching**, and **data-loss recovery**. And it is **fast** and **simple**!
 
@@ -151,7 +151,7 @@ Access control is done on the level of resources and resource methods. Access ca
 If you are interested in knowing more, visit the project page on [Github](https://github.com/jirenius/resgate).  
 Or if you have any question or feedback, don't hesitate to contact me directly via email:
 
-[&#115;&#097;&#109;&#117;&#101;&#108;&#064;&#106;&#105;&#114;&#101;&#110;&#105;&#117;&#115;&#046;&#099;&#111;&#109;](mailto:&#115;&#097;&#109;&#117;&#101;&#108;&#064;&#106;&#105;&#114;&#101;&#110;&#105;&#117;&#115;&#046;&#099;&#111;&#109;)
+[samuel@jirenius.com](mailto:samuel@jirenius.com)
 
 Or find me in the [NATS Community](https://natsio.slack.com/messages/DBET737GV).
 
@@ -161,7 +161,7 @@ Samuel Jirénius is a long time developer with his roots in C64 Basic and Amiga'
 
 He has been working as the system architect and lead developer of Altitude Xperience, a cloud based call center solution developed by [Altitude](https://www.altitude.com/). The call center market's requirement of scalability, high availablity, and real time client synchronization, seeded the ideas that would eventually, after leaving Altitude, lead to the development of Resgate.
 
-Samuel is currently working at [PRO NON X](https://www.prononx.se/)
+Samuel is currently working at [PRO NON X](https://www.prononx.se/).
 
 ## Links
 * **[Resgate](https://github.com/jirenius/resgate)** - project page for the realtime API gateway
